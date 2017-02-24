@@ -3,7 +3,7 @@ include <placements.scad>
 use <vframe.scad>
 
 module carriage(){
-    cube([20,20,10],center=true);
+    cube([20,20,10]);
 }
 
 module c_wheel(r){
