@@ -2,8 +2,13 @@ include <configuration.scad>
 include <placements.scad>
 use <vframe.scad>
 
+
+
 module carriage(){
-    cube([20,20,10]);
+    vframe_diagonal = vframe_s*sqrt(2);
+    base_height = c_i_wheel_dist+c_wheel_mnt_dia;
+    base_width = vframe_diagonal + vframe_w*sqrt(2) + carriage_clearance;
+    cube([base_height,base_width,carriage_base_depth]);
 }
 
 module c_wheel(r){
